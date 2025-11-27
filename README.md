@@ -3,8 +3,8 @@
 Structural analysis of NY-ESO-1 in complex with HLA-A2 and TCR/antibody/TCR-like with annotated hydrogen bonds and hydrophobic pockets for immunology review.
 
 ## Associated Publication
-[NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer]  
-[Nik Mohd Asri Nik Amirah Auni, Norhanani Mohd Redzwan, Faezahtul Arbaeyah Hussain, Maya Mazuwin Yahya, Kah Keng Wong]  
+NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer
+Nik Mohd Asri Nik Amirah Auni, Norhanani Mohd Redzwan, Faezahtul Arbaeyah Hussain, Maya Mazuwin Yahya, Kah Keng Wong
 
 ## Repository Contents
 
@@ -28,7 +28,7 @@ This repository contains:
 | 7 | Experimental | 9MIN | HLA-A2 | NY-ESO-1 (SLLMWITQV) | TCR mimic | PDB |
 | 8 | Predicted | AlphaFold3 | - | NY-ESO-1 (full-length, 180aa) | - | AlphaFold3 |
 
-See `Structures/Structure_metadata.xslx` for complete details.
+See `Structure_metadata.xslx` for complete details.
 
 ## Quick Start
 
@@ -115,6 +115,9 @@ This folder contains ChimeraX session files (.cxs) with all structural annotatio
 - To export images: **File → Save → Image**
 
 # Figure
+
+![Fig 1 NYESO1 in TNBC](https://github.com/user-attachments/assets/c89f6d6f-fb30-4003-bd74-b881863b7fef)
+
 
 ## Figure 1: Schematic Representation of Immunologic Epitopes of NY-ESO-1 and Structure of NY-ESO-1 Peptide Bound to HLA-A2
 
