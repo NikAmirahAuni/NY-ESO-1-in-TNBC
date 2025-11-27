@@ -3,7 +3,7 @@
 Structural analysis of NY-ESO-1 in complex with HLA-A2 and TCR/antibody/TCR-like with annotated hydrogen bonds and hydrophobic pockets for immunology review.
 
 ## Associated Publication
-NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer
+NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer   
 Nik Mohd Asri Nik Amirah Auni, Norhanani Mohd Redzwan, Faezahtul Arbaeyah Hussain, Maya Mazuwin Yahya, Kah Keng Wong
 
 ## Repository Contents
