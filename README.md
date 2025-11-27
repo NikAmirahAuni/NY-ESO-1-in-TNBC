@@ -15,12 +15,25 @@
 
 ---
 
-## 📋 Repository Contents
+## 📋 Repository Overview
 - **7 experimental crystal structures** from PDB and **1 AlphaFold3-predicted structure** (NY-ESO-1 full-length)
 
 - ChimeraX session files with structural annotations
 
 - Analysis scripts and methods to visualize the hydrogen bonds and hydrophobic pockets of pMHC-TCR/antibody complexes
+
+---
+
+## Repository Structure
+```
+├── structures/          # PDB and CIF files   
+│   ├── experimental/   # Crystal structures from PDB   
+│   └── predicted/      # AlphaFold3 model with confidence data   
+├── chimerax_sessions/  # Session files (.cxs) with annotations   
+├── figures/            # Publication-quality images   
+├── scripts/            # Analysis scripts   
+└── methods/            # Detailed protocols   
+```
 
 ---
 
@@ -41,7 +54,31 @@ See `Structure_metadata.xslx` for complete details.
 
 ---
 
-## Quick Start
+## 🔬 Workflow
+
+1. Download PDB files from SWISS-MODEL (https://swissmodel.expasy.org/)
+
+   **PDB files:** 1S9W.ent, 1S9X.ent, 1S9Y.ent, 3HAE.ent, 2BNQ.ent, 9DL1.ent, 9MIN.ent  
+
+
+2. Model full-length NY-ESO-1 with AlphaFold3
+
+   **Sequence source:** UniProt P78358 (https://www.uniprot.org/uniprotkb/P78358/entry#sequences)   
+   **Model prediction:** AlphaFold3 server (https://alphafoldserver.com/)   
+   **Model file:** P78358.cif   
+   **Quality metrics:**   
+      Mean pLDDT: 63.15 (expected for intrinsically disordered protein)   
+      Epitope region (157-165) pLDDT: 88.15 (high confidence)   
+      Pcc-1 domain (82-168) pLDDT: 85.0 (high confidence)   
+      Fraction disordered: 58% (glycine-rich N-terminus)   
+   ** Structure verification script:   
+         ```
+         import os   
+         os.chdir("--add working directory--")   
+         %run analyze_nyeso1.py 
+         ```
+   This generates **P78358_model_info.txt** (Confidence analysis) and **ny_eso_1_confidence_plot.png** (pLDDT visualization)
+   
 
 ### View Structures in ChimeraX
 
@@ -60,16 +97,7 @@ os.chdir("*include your directory*")
 ```
 This will generate confidence metrics and visualizations for the NY-ESO-1 model.
 
-## Repository Structure
-```
-├── structures/          # PDB and CIF files   
-│   ├── experimental/   # Crystal structures from PDB   
-│   └── predicted/      # AlphaFold3 model with confidence data   
-├── chimerax_sessions/  # Session files (.cxs) with annotations   
-├── figures/            # Publication-quality images   
-├── scripts/            # Analysis scripts   
-└── methods/            # Detailed protocols   
-```
+
 
 ## Key Findings
 
