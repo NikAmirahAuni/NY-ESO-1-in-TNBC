@@ -469,42 +469,7 @@ ChimeraX session files (.cxs) containing all visualizations, annotations, and ca
   - AlphaFold Server: https://alphafoldserver.com/
 - Operating system: [Windows]
 
-## References
 
-### Software Citations
-
-**ChimeraX:**
-Pettersen EF, Goddard TD, Huang CC, et al. UCSF ChimeraX: Structure visualization for researchers, educators, and developers. Protein Sci. 2021;30(1):70-82. doi:10.1002/pro.3943
-
-**AlphaFold3:**
-Abramson J, Adler J, Dunger J, et al. Accurate structure prediction of biomolecular interactions with AlphaFold 3. Nature. 2024;630:493-500. doi:10.1038/s41586-024-07487-w
-
-**Spyder:**
-Spyder Project Contributors. Spyder - The Scientific Python Development Environment. 
-Available at: https://www.spyder-ide.org/
-
-**Python:**
-Van Rossum G, Drake FL. Python 3 Reference Manual. Scotts Valley, CA: CreateSpace; 2009.
-
-### Database Citations
-
-**SWISS-MODEL:**
-Waterhouse A, Bertoni M, Bienert S, Studer G, Tauriello G, Gumienny R, Heer FT, de Beer TAP, Rempfer C, Bordoli L, Lepore R, Schwede T. SWISS-MODEL: homology modelling of protein structures and complexes. Nucleic Acids Res 2018;46, W296-W303.
-
-Bienert S, Waterhouse A, de Beer TAP, Tauriello G, Studer G, Bordoli L, Schwede T. The SWISS-MODEL Repository - new features and functionality. Nucleic Acids Res 2017;45, D313-D319.
-
-Guex N, Peitsch MC, Schwede T Automated comparative protein structure modeling with SWISS-MODEL and Swiss-PdbViewer: A historical perspective. Electrophoresis 2009;30, S162-S173.
-
-Studer G, Rempfer C, Waterhouse AM, Gumienny R, Haas J, Schwede T. QMEANDisCo - distance constraints applied on model quality estimation.
-Bioinformatics 2020;36, 1765-1771.
-
-Bertoni M, Kiefer F, Biasini M, Bordoli L, Schwede T. Modeling protein quaternary structure of homo- and hetero-oligomers beyond binary interactions by homology. Scientific Reports 2017;7.
-
-**UniProt:**
-The UniProt Consortium. UniProt: the universal protein knowledgebase in 2021. Nucleic Acids Res. 2021;49(D1):D480-D489.
-
-**InterPro:**
-Paysan-Lafosse T, Blum M, Chuguransky S, et al. InterPro in 2022. Nucleic Acids Res. 2023;51(D1):D418-D427.
 
 ## Citation
 
@@ -532,6 +497,41 @@ For the AlphaFold3 model, also cite:
 Abramson, J., Adler, J., Dunger, J. et al. Accurate structure prediction of 
 biomolecular interactions with AlphaFold 3. Nature 630, 493–500 (2024).
 ```
+### Software Citations
+```
+**ChimeraX:**
+Pettersen EF, Goddard TD, Huang CC, et al. UCSF ChimeraX: Structure visualization for researchers, educators, and developers. Protein Sci. 2021;30(1):70-82. doi:10.1002/pro.3943
+
+**AlphaFold3:**
+Abramson J, Adler J, Dunger J, et al. Accurate structure prediction of biomolecular interactions with AlphaFold 3. Nature. 2024;630:493-500. doi:10.1038/s41586-024-07487-w
+
+**Spyder:**
+Spyder Project Contributors. Spyder - The Scientific Python Development Environment. 
+Available at: https://www.spyder-ide.org/
+
+**Python:**
+Van Rossum G, Drake FL. Python 3 Reference Manual. Scotts Valley, CA: CreateSpace; 2009.
+```
+### Database Citations
+```
+**SWISS-MODEL:**
+Waterhouse A, Bertoni M, Bienert S, Studer G, Tauriello G, Gumienny R, Heer FT, de Beer TAP, Rempfer C, Bordoli L, Lepore R, Schwede T. SWISS-MODEL: homology modelling of protein structures and complexes. Nucleic Acids Res 2018;46, W296-W303.
+
+Bienert S, Waterhouse A, de Beer TAP, Tauriello G, Studer G, Bordoli L, Schwede T. The SWISS-MODEL Repository - new features and functionality. Nucleic Acids Res 2017;45, D313-D319.
+
+Guex N, Peitsch MC, Schwede T Automated comparative protein structure modeling with SWISS-MODEL and Swiss-PdbViewer: A historical perspective. Electrophoresis 2009;30, S162-S173.
+
+Studer G, Rempfer C, Waterhouse AM, Gumienny R, Haas J, Schwede T. QMEANDisCo - distance constraints applied on model quality estimation.
+Bioinformatics 2020;36, 1765-1771.
+
+Bertoni M, Kiefer F, Biasini M, Bordoli L, Schwede T. Modeling protein quaternary structure of homo- and hetero-oligomers beyond binary interactions by homology. Scientific Reports 2017;7.
+
+**UniProt:**
+The UniProt Consortium. UniProt: the universal protein knowledgebase in 2021. Nucleic Acids Res. 2021;49(D1):D480-D489.
+
+**InterPro:**
+Paysan-Lafosse T, Blum M, Chuguransky S, et al. InterPro in 2022. Nucleic Acids Res. 2023;51(D1):D418-D427.
+
 
 ## License
 
