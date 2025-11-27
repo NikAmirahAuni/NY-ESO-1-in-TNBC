@@ -1,21 +1,30 @@
-# NY-ESO-1-Structural-Analysis
+<div align="center">
 
-Structural analysis of NY-ESO-1 in complex with HLA-A2 and TCR/antibody/TCR-like with annotated hydrogen bonds and hydrophobic pockets for immunology review.
+# 🧬 NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer 
 
-## Associated Publication
-NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer   
-Nik Mohd Asri Nik Amirah Auni, Norhanani Mohd Redzwan, Faezahtul Arbaeyah Hussain, Maya Mazuwin Yahya, Kah Keng Wong
 
-## Repository Contents
+### ✨ Structural analysis of NY-ESO-1 in complex with HLA-A2 and TCR/antibody/TCR-like with annotated hydrogen bonds and hydrophobic pockets for immunology review.
 
-This repository contains:
-- **7 experimental crystal structures** from PDB
-- **1 AlphaFold3-predicted structure** (NY-ESO-1 full-length)
+
+
+**Author:** **Nik** **Mohd** **Asri** **Nik** **Amirah** **Auni,** **Kah** **Keng** **Wong**  
+
+
+
+</div>
+
+---
+
+## 📋 Repository Contents
+- **7 experimental crystal structures** from PDB and **1 AlphaFold3-predicted structure** (NY-ESO-1 full-length)
+
 - ChimeraX session files with structural annotations
-- Publication-quality figures
-- Analysis scripts and methods
 
-## Structure Overview
+- Analysis scripts and methods to visualize the hydrogen bonds and hydrophobic pockets of pMHC-TCR/antibody complexes
+
+---
+
+## ⭐ Structure Overview
 
 | ID | Type | PDB/Model | MHC Allele | Peptide | TCR | Source |
 |----|------|-----------|------------|---------|-----|--------|
@@ -26,9 +35,11 @@ This repository contains:
 | 5 | Experimental | 3HAE | HLA-A2 | NY-ESO-1 (SLLMWITQV) | Antibody | PDB |
 | 6 | Experimental | 9DL1 | HLA-A2 | NY-ESO-1 (SLLMWITQV) | TRACeR | PDB |
 | 7 | Experimental | 9MIN | HLA-A2 | NY-ESO-1 (SLLMWITQV) | TCR mimic | PDB |
-| 8 | Predicted | AlphaFold3 | - | NY-ESO-1 (full-length, 180aa) | - | AlphaFold3 |
+| 8 | Predicted | P78358 | - | NY-ESO-1 (full-length, 180aa) | - | AlphaFold3 |
 
 See `Structure_metadata.xslx` for complete details.
+
+---
 
 ## Quick Start
 
@@ -41,23 +52,23 @@ See `Structure_metadata.xslx` for complete details.
 
 ### Analyze AlphaFold3 Model
 
-Run the Python analysis script:
-import os
-os.chdir("*include your directory*")
+Run the Python analysis script:   
+```
+import os   
+os.chdir("*include your directory*")   
 %run analyze_nyeso1.py
 ```
-
 This will generate confidence metrics and visualizations for the NY-ESO-1 model.
 
 ## Repository Structure
 ```
-├── structures/          # PDB and CIF files
-│   ├── experimental/   # Crystal structures from PDB
-│   └── predicted/      # AlphaFold3 model with confidence data
-├── chimerax_sessions/  # Session files (.cxs) with annotations
-├── figures/            # Publication-quality images
-├── scripts/            # Analysis scripts
-└── methods/            # Detailed protocols
+├── structures/          # PDB and CIF files   
+│   ├── experimental/   # Crystal structures from PDB   
+│   └── predicted/      # AlphaFold3 model with confidence data   
+├── chimerax_sessions/  # Session files (.cxs) with annotations   
+├── figures/            # Publication-quality images   
+├── scripts/            # Analysis scripts   
+└── methods/            # Detailed protocols   
 ```
 
 ## Key Findings
@@ -75,7 +86,7 @@ Detailed visualization and analysis protocols are available in `methods/visualiz
 - AlphaFold3
 - Spyder v5.5.1
 
-## AlphaFold3 Model Details
+## AlphaFold3 Model (P78358) Details
 
 The NY-ESO-1 full-length structure was predicted using AlphaFold3:
 - **Mean pLDDT:** 63.15 (moderate, expected for intrinsically disordered protein)
