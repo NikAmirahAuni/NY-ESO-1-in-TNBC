@@ -154,21 +154,25 @@ Final figures were assembled in BioRender (https://www.biorender.com/)
 
 **Figures:**
 
-https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%201%20NYESO1%20in%20TNBC.jpeg
+![Figure 1](https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%201%20NYESO1%20in%20TNBC.jpeg)
 
 **Figure 1 NY-ESO-1 epitope map and peptide-MHC structure**   
 - Panel A: Immunological epitopes (antibody vs T cell regions)   
 - Panel B: Crystal structure showing solvent-exposed and buried residues (1S9W)
 - Panel C: Structural comparison of C-terminal peptide variants (1S9W, 1S9X, 1S9Y)
 
-https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%202%20NYESO1%20in%20TNBC.jpeg
+
+
+![Figure 2](https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%202%20NYESO1%20in%20TNBC.jpeg)
 
 **Figure 2 Full-length NY-ESO-1 structure and function**
 - AlphaFold3 model with Pcc-1 domain highlighted in yellow
 - Expression timeline during fetal development
 - Molecular function in spermatogonial development
 
-https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%203%20NYESO1%20in%20TNBC.jpeg
+
+
+![Figure 3](https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%203%20NYESO1%20in%20TNBC.jpeg)
 
 **Figure 3 Recognition by different binding molecules**
 - Panel A: Fab antibody (3HAE) - key contacts at Met4/Trp5
