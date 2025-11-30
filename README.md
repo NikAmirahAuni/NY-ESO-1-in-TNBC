@@ -240,6 +240,11 @@ UniProt
 The UniProt Consortium. UniProt: the universal protein knowledgebase in 2021. Nucleic Acids Res. 2021;49:D480-D489.
 ```
 
+PANTHER
+```
+Mi H, Muruganujan A, Ebert D, Huang X, Thomas PD. PANTHER version 16: a revised family classification, tree-based classification tool, enhancer regions and extensive API. Nucleic Acids Res. 2021;49(D1):D394-D403. doi:10.1093/nar/gkaa1106
+```
+
 InterPro
 ```
 Paysan-Lafosse T, Blum M, Chuguransky S, et al. InterPro in 2022. Nucleic Acids Res. 2023;51(D1):D418-D427.
