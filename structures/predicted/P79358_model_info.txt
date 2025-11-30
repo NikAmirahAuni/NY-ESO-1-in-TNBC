@@ -1,0 +1,156 @@
+AlphaFold3 Model Information
+============================
+
+Structure: NY-ESO-1 (CTAG1B) full-length protein
+UniProt ID: P78358
+Sequence Length: 180 amino acids
+Prediction Method: AlphaFold3
+Prediction Date: November 26, 2025
+Model Files: P78358
+
+## AlphaFold3 Quality Metrics
+
+pTM (predicted TM-score): 0.440
+  -> Overall structure confidence (0-1 scale)
+  -> Score of 0.440 indicates low quality
+
+Ranking Score: 0.730
+  -> AlphaFold3's combined quality metric
+
+Fraction Disordered: 0.58 (58%)
+  -> Expected for NY-ESO-1 (glycine-rich N-terminus)
+
+Has Clashes: No [OK]
+Number of Recycles: 10
+
+## Per-Residue Confidence (pLDDT)
+
+Mean pLDDT: 63.15
+Median pLDDT: 57.61
+Standard Deviation: 24.10
+Range: 27.9 - 96.7
+
+## Confidence Distribution
+
+High Confidence (pLDDT >90): 49 residues (27.2%)
+  Residue ranges: 89-96, 99, 102-109, 125-138, 142-143, 145-159, 161
+  
+
+Medium Confidence (pLDDT 70-90): 25 residues (13.9%)
+  Residue ranges: 86-88, 97-98, 100-101, 110-111, 121-124, 139-141, 144, 160, 162-166, 168-169
+  
+
+Low Confidence (pLDDT <70): 106 residues (58.9%)
+  Residue ranges: 1-85, 112-120, 167, 170-180
+
+## Regional Analysis
+
+N-terminal glycine-rich (1-81):
+  Mean pLDDT: 39.63 ± 5.22
+  Range: 27.9 - 49.9
+  Residues analyzed: 81
+Pcc-1 domain (82-168):
+  Mean pLDDT: 84.96 ± 13.50
+  Range: 42.9 - 96.7
+  Residues analyzed: 87
+C-terminal region (169-180):
+  Mean pLDDT: 63.71 ± 4.44
+  Range: 56.5 - 71.9
+  Residues analyzed: 12
+
+## Known Immunogenic Epitope (157-165: SLLMWITQC)
+
+Mean pLDDT: 88.15
+Minimum pLDDT: 83.6
+All residues >70: Yes [OK]
+Quality Assessment: High - suitable for structural analysis
+
+## Rationale for Modeling
+
+No experimental structure of full-length NY-ESO-1 (180 aa) exists in PDB.
+Available experimental data limited to:
+- PDB 1S9W: Residues 157-165 only (peptide in HLA-A2 complex)
+- PDB 1S9Y: Residues 157-165 variant (peptide in HLA-A2 complex)
+
+This model provides:
+1. Full-length structural context for NY-ESO-1
+2. Visualization of protein domains and epitope regions
+3. Structural basis for understanding immunogenicity
+4. Context for peptide presentation on MHC molecules
+
+## Validation
+
+### 1. AlphaFold3 Quality Assessment
+- pTM score: 0.440 (lower quality)
+- Mean pLDDT: 63.15 (low overall confidence)
+- Model shows expected disorder: 58% disordered
+  (consistent with glycine-rich N-terminus)
+- No structural clashes detected [OK]
+
+### 2. Regional Confidence Analysis
+- N-terminal region (1-81): Mean pLDDT 39.6
+  -> Low-moderate confidence expected for disordered region [OK]
+- Pcc-1 domain (82-168): Mean pLDDT 85.0
+  -> Higher confidence as expected for structured domain [OK]
+- C-terminal region (169-180): Mean pLDDT 63.7
+- Confidence gradient consistent with known biochemical properties [OK]
+
+### 3. Epitope Region Quality
+- Immunogenic epitope (157-165): Mean pLDDT 88.15
+- High confidence supports reliable structural analysis [OK]
+- Can be directly compared with experimental structure 1S9W
+- Suitable for visualization of epitope presentation context
+
+### 4. Structural Features
+- Model reflects known characteristics:
+  * Glycine-rich N-terminus: flexible, lower confidence
+  * Pcc-1 domain: more structured, higher confidence
+  * Small protein size (18 kDa) - no large globular domains expected
+- Disorder prediction consistent with literature
+- No unexpected structural features
+
+### 5. Comparison Potential
+- Epitope region (157-165) can be aligned with PDB 1S9W
+- Backbone conformation suitable for comparison
+- High enough confidence for comparative structural analysis
+
+## Limitations
+
+- N-terminal region has lower confidence due to intrinsic disorder
+  (58% of protein predicted as disordered)
+- pTM score of {ptm:.2f} indicates {'good' if ptm > 0.8 else 'moderate'} global structure quality
+- Conformations in flexible regions represent one possible state
+- No experimental validation for full-length structure exists
+- Fine structural details in low-confidence regions may not be accurate
+
+## Suitable Applications
+
+[OK] Epitope mapping and visualization
+[OK] Understanding structural context of immunogenic regions
+[OK] Designing vaccine constructs
+[OK] Comparative analysis with peptide-MHC structures
+[OK] Context for reviewing pMHC-TCR interactions
+[OK] Illustrating protein domains in review papers
+
+[X] Not suitable for detailed drug design targeting full-length protein
+[X] N-terminal region conformations should not be over-interpreted
+[X] Quantitative binding predictions not recommended
+
+## Files Included
+
+- fold_p78358_model_0.cif (3D structure with pLDDT in B-factor)
+- fold_p78358_summary_confidences_0.json (AlphaFold3 quality metrics)
+- model_info.txt (this analysis report)
+- ny_eso1_confidence_plot.png (optional: confidence visualization)
+
+## Conclusion
+
+Model provides valuable structural context for NY-ESO-1 in the context of 
+pMHC-TCR review. Despite moderate overall quality (pTM: {ptm:.2f}, mean pLDDT: 
+{mean_plddt:.2f}), the {'high' if epitope_mean and epitope_mean > 85 else 'moderate'} confidence in the immunogenic epitope region (157-165) 
+makes this suitable for comparative visualization and structural discussion.
+The high fraction of disorder ({fraction_disordered*100:.0f}%) is expected and consistent 
+with the known glycine-rich, flexible nature of NY-ESO-1.
+
+Appropriate for inclusion in review papers with clear documentation of 
+confidence levels and comparison with experimental peptide-MHC structures.
