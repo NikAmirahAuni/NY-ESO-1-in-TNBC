@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧬 NY-ESO-1: A Promising Immunotherapeutic Target in Triple-negative Breast Cancer 
+# 🧬 NY-ESO-1 as an Immunotherapeutic Target in Triple-negative Breast Cancer 
 
 
 ### ✨ Structural analysis of NY-ESO-1 in complex with HLA-A2 and TCR/antibody/TCR-like with annotated hydrogen bonds and hydrophobic pockets for immunology review.
@@ -76,7 +76,7 @@
 | 7 | Experimental | 9MIN | HLA-A2 | NY-ESO-1 (SLLMWITQV) | TCR mimic | PDB |
 | 8 | Predicted | P78358 | - | NY-ESO-1 (full-length, 180aa) | - | AlphaFold3 |
 
-See `structure/Structure_metadata.xslx` for complete details.
+See `structures/Structure_metadata.xslx` for complete details.
 
 ---
 
@@ -93,6 +93,8 @@ See `structure/Structure_metadata.xslx` for complete details.
 | 5 | 3HAE | HLA-A2/NY-ESO-1₁₅₇₋₁₆₅ (SLLMWITQV) + 3M4E5 Fab | 2.90 Å | Peptide-MHC-antibody complex |
 | 6 | 9DL1 | HLA-A2/NY-ESO-1₁₅₇₋₁₆₅ (SLLMWITQV) + TRACER-I | 2.30 Å | Peptide-MHC-TCR-like complex |
 | 7 | 9MIN | HLA-A2/NY-ESO-1₁₅₇₋₁₆₅ (SLLMWITQV) + TCR mimic | 2.05 Å | Peptide-MHC-TCR-like complex |
+
+See `structures/experimental` for the PDB files of each structure
 
 ⚗️ 2. Model full-length NY-ESO-1 with AlphaFold3
 
@@ -113,6 +115,8 @@ os.chdir("--add working directory--")
 ```
 
    This generates **P78358_model_info.txt** (confidence analysis) and **ny_eso_1_confidence_plot.png** (pLDDT visualization)
+   
+See `structures/predicted` for the PDB file and complete details
    
 🔍 3. Visualize with ChimeraX
 
@@ -136,7 +140,9 @@ Available sessions:
 | Fig 3C (9DL1).cxs | 3C | TRACeR-I complex with pockets |
 | Fig 3D (9MIN).cxs | 3D | TCR mimic complex with H-bonds |
 
-Detailed ChimeraX commands and analysis methods are in `visualization_protocol.md`
+All ChimeraX sessions are in `ChimeraX_sessions`
+
+Detailed commands and analysis methods are in `visualization_protocol.md`
 
 🎨 4. Figures created with BioRender
 
@@ -148,21 +154,21 @@ Final figures were assembled in BioRender (https://www.biorender.com/)
 
 **Figures:**
 
-**Insert Fig 1 link**
+https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%201%20NYESO1%20in%20TNBC.jpeg
 
 **Figure 1 NY-ESO-1 epitope map and peptide-MHC structure**   
 - Panel A: Immunological epitopes (antibody vs T cell regions)   
 - Panel B: Crystal structure showing solvent-exposed and buried residues (1S9W)
 - Panel C: Structural comparison of C-terminal peptide variants (1S9W, 1S9X, 1S9Y)
 
-**Insert Fig 2 link**
+https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%202%20NYESO1%20in%20TNBC.jpeg
 
 **Figure 2 Full-length NY-ESO-1 structure and function**
 - AlphaFold3 model with Pcc-1 domain highlighted in yellow
 - Expression timeline during fetal development
 - Molecular function in spermatogonial development
 
-**Insert Fig 3 link**
+https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%203%20NYESO1%20in%20TNBC.jpeg
 
 **Figure 3 Recognition by different binding molecules**
 - Panel A: Fab antibody (3HAE) - key contacts at Met4/Trp5
@@ -303,6 +309,11 @@ save output.png width 3000 height 2000 supersample 3
 
 This work is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
+**BioRender license:**
+Figure 1: Created in BioRender. Nik Amirah Auni, N. (2025) https://BioRender.com/7qg3s7c
+Figure 2: Created in BioRender. Nik Amirah Auni, N. (2025) https://BioRender.com/6woif3q
+Figure 3: Created in BioRender. Nik Amirah Auni, N. (2025) https://BioRender.com/mbk8ggp
+
 ---
 
 ## 💬 Contact
@@ -313,10 +324,3 @@ Department of Immunology, School of Medical Sciences,
 Universiti Sains Malaysia, Kelantan, Malaysia   
 
 ---
-
-## 🌟 Acknowledgement
-
-- PDB structures obtained from RCSB Protein Data Bank
-- AlphaFold3 prediction via AlphaFold server
-- Visualization performed using UCSF ChimeraX
-- Figure assembly with BioRender
