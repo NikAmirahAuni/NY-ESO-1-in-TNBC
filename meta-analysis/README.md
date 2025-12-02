@@ -5,7 +5,6 @@ This folder contains a meta-analysis of NY-ESO-1 expression across multiple stud
 ## 📋 Contents
 
 - `meta_analysis.R` - R script for meta-analysis
-- `data` - Study raw data
 - `NY-ESO-1_Meta-Analysis_Results` - Excel output with all tables
 - `Figure 4` - Forest plots, funnel plots, subgroup analyses
 
