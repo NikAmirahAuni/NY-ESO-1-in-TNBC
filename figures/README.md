@@ -1,6 +1,6 @@
-# Figure Legends
+# 🎇 Figure Legends
 
-## Figure 1: Schematic Representation of Immunologic Epitopes of NY-ESO-1 and Structure of NY-ESO-1 Peptide Bound to HLA-A2
+## ✏️ Figure 1: Schematic Representation of Immunologic Epitopes of NY-ESO-1 and Structure of NY-ESO-1 Peptide Bound to HLA-A2
 
 ### Panel A: Immunological Epitope Map of NY-ESO-1
 Map of immunological epitopes of NY-ESO-1. The green area is rich in epitopes recognized by antibodies. The naturally occurring anti-NY-ESO-1 antibodies mostly map to this soluble N-terminus region. The purple area, the C-terminus region corresponding to cellular responses, is rich in epitopes recognized by CD4+ and CD8+ T cells.
@@ -17,7 +17,7 @@ Structural comparison showing that substitution of Cys9 with Ala9 or Ser9 mainta
 
 ---
 
-## Figure 2: NY-ESO-1 Expression During Fetal Development and Functional Roles in Spermatogonial Cells
+## 🖌 Figure 2: NY-ESO-1 Expression During Fetal Development and Functional Roles in Spermatogonial Cells
 
 ### NY-ESO-1 Expression Timeline
 During fetal development, NY-ESO-1 is expressed starting at week 13, reaching peak levels during second trimester (weeks 22-24), and declining before birth.
@@ -27,7 +27,7 @@ NY-ESO-1 is upregulated in spermatogonial cells, containing Pcc-1 domain located
 
 ---
 
-## Figure 3: Structural Basis of NY-ESO-1 Recognition by TCR, Antibody, and TCR-like Binding Complexes
+## 🖍️ Figure 3: Structural Basis of NY-ESO-1 Recognition by TCR, Antibody, and TCR-like Binding Complexes
 
 ### Panel A: HLA-A2/NY-ESO-1₁₅₇₋₁₆₅ in Complex with Fab 3M4E5
 **PDB ID:** [3HAE]  
