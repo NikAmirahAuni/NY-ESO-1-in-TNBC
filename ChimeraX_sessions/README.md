@@ -1,8 +1,8 @@
-# ChimeraX Session Files
+# 📝 ChimeraX Session Files
 
 This folder contains ChimeraX session files (.cxs) with all structural annotations.
 
-## How to Use
+## ✍️ How to Use
 
 1. Install [ChimeraX](https://www.rbvi.ucsf.edu/chimerax/) (version 1.10 or later)
 2. Open any `.cxs` file:
@@ -12,7 +12,7 @@ This folder contains ChimeraX session files (.cxs) with all structural annotatio
    - Hydrogen bonds
    - Hydrophobic pocket highlights
 
-## Session Files
+## 📩 Session Files
 
 - `Fig 1B (1S9W).cxs` - HLA-A2/NY-ESO-1(157-165) with solvent-exposed or buried residues
 - `Fig 1C (1S9W, 1S9X, 1S9Y).cxs` - HLA-A2/NY-ESO-1(157-165) with substitution at residue 9 of peptide with Alanine or Serine
@@ -22,7 +22,7 @@ This folder contains ChimeraX session files (.cxs) with all structural annotatio
 - `Fig 3C (9DL1).cxs` - HLA-A2/NY-ESO-1(157-165) in complex with TRACeR-I with H-bonds and hydrophobic pockets of TRACeR-I
 - `Fig 3D (9MIN).cxs` - HLA-A2/NY-ESO-1(157-165) in complex with TCR mimic with H-bonds
 
-## Tips
+## ☀ Tips
 
 - The structures reference PDB files in `../Structures/`
 - Keep the folder structure intact for sessions to load properly
