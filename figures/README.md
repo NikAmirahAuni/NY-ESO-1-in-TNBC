@@ -1,6 +1,5 @@
 # 🎇 Figure Legends
 
-
 ---
 
 ## ✏️ Figure 1: Schematic Representation of Immunologic Epitopes of NY-ESO-1 and Structure of NY-ESO-1 Peptide Bound to HLA-A2
