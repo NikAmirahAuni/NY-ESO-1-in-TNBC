@@ -1,15 +1,15 @@
-# Structural Visualization Protocol
+# 🎇 Structural Visualization Protocol
 
-## Software
+## 🖥️ Software
 
-- **ChimeraX** version 1.10 (UCSF)
-- Available at: https://www.rbvi.ucsf.edu/chimerax/
+- **ChimeraX** version 1.10 (UCSF; https://www.rbvi.ucsf.edu/chimerax/)
 - **Python** 3.12 with BioPython for AlphaFold3 analysis
 - **AlphaFold3** for NY-ESO-1 full-length structure prediction
 
-## Structure Sources
+## 🧬 Structure Sources
 
-### Experimental Structures (PDB)
+### Experimental Structures (PDB)   
+
 All experimental structures were obtained from the RCSB Protein Data Bank (https://www.rcsb.org/):
 
 - **1S9W** - HLA-A2/NY-ESO-1₁₅₇₋₁₆₅ (SLLMWITQC), Resolution: 2.2 Å
@@ -28,7 +28,7 @@ All experimental structures were obtained from the RCSB Protein Data Bank (https
 
 ---
 
-## Protocol
+## 📋 Protocol
 
 ### 1. Loading Structures
 ```chimerax
@@ -90,7 +90,7 @@ color sel yellow
 
 ---
 
-## Color Scheme and Visualization Details
+## 🎨 Color Scheme and Visualization Details
 
 All structural figures were prepared using UCSF ChimeraX v1.10 with consistent color schemes:
 
@@ -120,7 +120,7 @@ All structural figures were prepared using UCSF ChimeraX v1.10 with consistent c
 
 ---
 
-## AlphaFold3 Model Analysis
+## ⚗️ AlphaFold3 Model Analysis
 
 ### Full-Length NY-ESO-1 Structure
 
@@ -191,7 +191,7 @@ This distribution indicates the Pcc-1 domain is well-predicted and suitable for 
 
 ---
 
-## Figure Preparation
+## 🖼 Figure Preparation
 
 ### High-Resolution Export
 ```chimerax
@@ -221,7 +221,7 @@ save panel_C.png width 1500 height 1500 supersample 3
 
 ---
 
-## Session Files
+## 📂 Session Files
 
 ChimeraX session files (.cxs) containing all visualizations, annotations, and camera angles are provided in the `chimerax_sessions/` directory. To reproduce figures:
 
@@ -232,7 +232,7 @@ ChimeraX session files (.cxs) containing all visualizations, annotations, and ca
 
 ---
 
-## Notes and Limitations
+## 💡 Notes and Limitations
 
 **Hydrogen bonds:**
 - All hydrogen bonds were manually identified based on original publications
@@ -269,7 +269,7 @@ ChimeraX session files (.cxs) containing all visualizations, annotations, and ca
   - AlphaFold Server: https://alphafoldserver.com/
 - Operating system: [Windows]
 
-## References
+## 📚 References
 
 ### Software Citations
 
