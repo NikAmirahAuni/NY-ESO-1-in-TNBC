@@ -12,7 +12,7 @@ Map of immunological epitopes of NY-ESO-1. The green area is rich in epitopes re
 Crystal structure of NY-ESO-1₁₅₇₋₁₆₅ (SLLMWITQC) bound to HLA-A2, with key residues labeled. The blue residues are solvent-exposed, while orange residues are buried residues for MHC binding.
 
 ### Panel C: Structural Comparison of Peptide Variants
-**PDB ID:** `1S9W, 1S9X, 1S9Y  `
+**PDB ID:** `1S9W, 1S9X, 1S9Y`  
 
 Structural comparison showing that substitution of Cys9 with Ala9 or Ser9 maintains similar geometry with Met4 and Trp5 forming central bulge for TCR recognition.
 
