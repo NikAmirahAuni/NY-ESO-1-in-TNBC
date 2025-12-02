@@ -9,11 +9,12 @@ pip install biopython numpy matplotlib
 
 
 ### Usage
+```python
 import os
-os.chdir("*include your directory*")
+os.chdir("path/to/scripts/")
 
 %run analyze_nyeso1.py
-
+```
 
 ### Inputs
 
