@@ -6,7 +6,6 @@ This folder contains a meta-analysis of NY-ESO-1 expression across multiple stud
 
 - `meta_analysis.R` - R script for meta-analysis
 - `NY-ESO-1_Meta-Analysis_Results` - Excel output with all tables
-- `Figure 4` - Forest plots, funnel plots, subgroup analyses
 
 ## 🎯 Objective
 
@@ -103,27 +102,6 @@ Contains 5 sheets:
 - **Figure 6F:** Influence analysis (leave-one-out)
 
 All figures are also displayed in RStudio Plots pane during execution.
-
-## 🎨 Figure Preparation and Color Scheme
-
-Raw figures were generated in R and exported as PDF (vector format). Final figures were edited using [Inkscape](https://inkscape.org/) for:
-
-- Label positioning
-- Color adjustments
-- Layout optimization for publication
-
-**Inkscape version:** 1.4.2
-
-### Main Analysis (Figures 6A,B,C)
-- Individual studies: **Navy blue** squares (000080FF)
-- Pooled estimate: **Maroon** diamond (800000FF)
-
-### Subgroup Analyses (Figures 6D,E,F)
-- **Group 1:** Purple gradient (light purple squares, CD97CDFF → dark purple diamond, 610E61FF)
-- **Group 2:** Orange gradient (light orange squares, FC883BFF → dark orange diamond, E55B00FF)
-- **Overall pooled:** Maroon diamond (800000FF)
-
-This color scheme visually distinguishes the main analysis from subgroup analyses while maintaining professional appearance.
 
 ## 📈 Key Results
 
