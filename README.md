@@ -212,7 +212,7 @@ Detailed commands and analysis methods are in `visualization_protocol.md`
    - By geographic region (Asia-Pacific vs Western countries)
 - **Influence analysis** (leave-one-out sensitivity analysis)
 
-3 🚀 Running command
+3 🚀 Run analysis
 
 ### Requirements
 ```r
@@ -245,21 +245,22 @@ Final figure 4 was post-processed using [Inkscape] for publication quality
 
 **Figures:**
 
-https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%201%20NYESO1%20in%20TNBC.jpeg
+![Figure 1](https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%201%20NYESO1%20in%20TNBC.jpeg)
+
 
 **Figure 1 NY-ESO-1 epitope map and peptide-MHC structure**   
 - Panel A: Immunological epitopes (antibody vs T cell regions)   
 - Panel B: Crystal structure showing solvent-exposed and buried residues (1S9W)
 - Panel C: Structural comparison of C-terminal peptide variants (1S9W, 1S9X, 1S9Y)
 
-https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%202%20NYESO1%20in%20TNBC.jpeg
+![Figure 2](https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%202%20NYESO1%20in%20TNBC.jpeg)
 
 **Figure 2 Full-length NY-ESO-1 structure and function**
 - AlphaFold3 model with Pcc-1 domain highlighted in yellow
 - Expression timeline during fetal development
 - Molecular function in spermatogonial development
 
-https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%203%20NYESO1%20in%20TNBC.jpeg
+![Figure 3](https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/Fig%203%20NYESO1%20in%20TNBC.jpeg)
 
 **Figure 3 Recognition by different binding molecules**
 - Panel A: Fab antibody (3HAE) - key contacts at Met4/Trp5
@@ -267,7 +268,7 @@ https://github.com/NikAmirahAuni/NY-ESO-1-Structural-Analysis/blob/main/figures/
 - Panel C: TRACeR-I (9DL1) - hydrophobic pocket accomodation and H-bond stabilizing the complex
 - Pandel D: TCR mimic (9MIN) - compact binding mode
 
-
+see `https://github.com/NikAmirahAuni/NY-ESO-1-in-TNBC/blob/main/meta-analysis/Fig%204%20NYESO%20in%20TNBC.docx`
 
 **Figure 4 Meta-analysis of NY-ESO-1 Expression Prevalence in TNBC.**
 - Panel A: Forest plot showing individual study prevalence
