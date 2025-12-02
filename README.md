@@ -47,7 +47,7 @@
 ```python
    pip install biopython numpy matplotlib
    import os
-   os.chdir("--add working directory--")
+   os.chdir("path/to/scripts/")
    %run analyze_nyeso1.py
 ```
 
@@ -132,7 +132,7 @@ See `structures/experimental` for the PDB files of each structure
 **Structure verification script:**   
 ```python
 import os   
-os.chdir("--add working directory--")   
+os.chdir("path/to/scripts/")   
 %run analyze_nyeso1.py   
 ```
 
@@ -468,7 +468,7 @@ install.packages("writexl")
 **Analyzing AlphaFold3 Model**
 ```python
 import os
-os.chdir("--add working directory--")
+os.chdir("path/to/scripts/")
 %run scripts/analyze_nyeso1.py
 ```
 
