@@ -190,9 +190,9 @@ Detailed commands and analysis methods are in `visualization_protocol.md`
 
 2. 📈 Statistical analysis
 - **Model:** Random-effects meta-analysis
-- **Estimator:** DerSimonian-Laird method for τ²
+- **Estimator:** Maximum Likelihood method for τ²
 - **Confidence Intervals:** Hartung-Knapp adjustment
-- **Summary Measure:** Raw proportions (PRAW)
+- **Summary Measure:** Logit-transformed proportions (PLOGIT)
 - **Study-level CI:** Normal approximation (NAsm)
 
 **Analyses Performed:**
