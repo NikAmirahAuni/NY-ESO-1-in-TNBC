@@ -238,7 +238,7 @@ See `meta-analysis` for the scripts and complete details
 - **Conserved hydrophobic pockets** in TRACeR-I accommodating peptide hotspot residues (MW peg)
 - **AlphaFold3 model** reveals full structural context of immunogenic NY-ESO-1 regions and the Pcc-1 domain (residues 82-168)
 - **Central peptide bulge** formed by Met4/Trp5 serves as primary recognition site across all binding modes
-- **Meta-analysis shows moderate prevalence (16.1%) in TNBC** with significant geographic and methodological variation
+- **Meta-analysis shows moderate prevalence (16.8%) in TNBC** with significant geographic and methodological variation
 - **Antibody clone selection** (E978 vs D8.38) significantly impacts prevalence estimates, suggesting importance of standardized detection protocols
 
 ---
