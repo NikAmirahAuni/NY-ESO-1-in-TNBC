@@ -40,9 +40,9 @@ To calculate the pooled prevalence of NY-ESO-1 expression in TNBC across 12 publ
 
 **Statistical Approach:**
 - **Model:** Random-effects meta-analysis
-- **Estimator:** DerSimonian-Laird method for τ²
+- **Estimator:** Maximum Likelihood for τ²
 - **Confidence Intervals:** Hartung-Knapp adjustment
-- **Summary Measure:** Raw proportions (PRAW)
+- **Summary Measure:** Logit-transformed proportions (PLOGIT)
 - **Study-level CI:** Normal approximation (NAsm)
 
 **Analyses Performed:**
@@ -105,27 +105,27 @@ All figures are also displayed in RStudio Plots pane during execution.
 
 ## 📈 Key Results
 
-**Pooled Prevalence:** 16.1% (95% CI: 10.5% - 21.6%)
+**Pooled Prevalence:** 16.8% (95% CI: 10.5% - 21.6%)
 
-**Heterogeneity:** I² = 82.7% (substantial heterogeneity)
-- τ² = 0.005
-- Q = 63.7 (p < 0.0001)
+**Heterogeneity:** I² = 83.7% (substantial heterogeneity)
+- τ² = 0.278
+- Q = 67.6 (p < 0.0001)
 
 **Publication Bias:** 
-- Egger's test: p = 0.025 (significant bias detected)
-- Trim-and-Fill: 6 studies imputed, adjusted prevalence = 10.7% (95% CI: 4.0-17.3%)
+- Egger's test: p = 0.796 (no significant bias detected)
+- Trim-and-Fill: 0 studies imputed, adjusted prevalence = 17.3% (95% CI: 12.3-23.7%)
 
 **Subgroup Findings:**
-- **E978 vs D8.38 antibody:** 15.5% vs 32.3% (p = 0.008) - Significant difference
-- **Large vs Small studies:** 14.6% vs 18.8% (p = 0.349) - No significant difference
-- **Asia-Pacific vs Western Countries:** 10.8% vs 19.3% (p = 0.020) - Significant difference
+- **E978 vs D8.38 antibody:** 32.6% vs 15.9% (p < 0.0001) - Significant difference
+- **Large vs Small studies:** 17.8% vs 14.1% (p = 0.373) - No significant difference
+- **Asia-Pacific vs Western Countries:** 18.7% vs 10.4% (p = 0.005) - Significant difference
 
 **Interpretation:**
-- Moderate NY-ESO-1 expression prevalence in TNBC (16.1%)
+- Moderate NY-ESO-1 expression prevalence in TNBC (16.8%)
 - Substantial heterogeneity across studies
 - Detection method (antibody clone) significantly affects prevalence estimates
 - Geographic variation suggests potential ethnic/population differences
-- Publication bias detected - true prevalence may be lower (~12%)
+- No publication bias detected - pooled estimate of 16.8% is stable and unbiased
 
 ## 📚 References
 
