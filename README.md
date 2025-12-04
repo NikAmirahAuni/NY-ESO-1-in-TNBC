@@ -269,7 +269,7 @@ H. Du, L. Mallik, D. Hwang, Y. Sun, C. Kaku, D. Hoces, et al., Targeting peptide
 C.H. Coles, R.M. Mulvaney, S. Malla, A. Walker, K.J. Smith, A. Lloyd, et al., TCRs with Distinct Specificity Profiles Use Different Binding Modes to Engage an Identical Peptide-HLA Complex, J Immunol 204 (2020) 1943-1953
 ```
 
-** 📄 Studies Included in Meta-analysis:**
+**📄 Studies Included in Meta-analysis:**
 
 Ademuyiwa et al [16]
 ```
