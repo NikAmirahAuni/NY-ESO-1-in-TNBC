@@ -271,63 +271,63 @@ C.H. Coles, R.M. Mulvaney, S. Malla, A. Walker, K.J. Smith, A. Lloyd, et al., TC
 
 **📄 Studies Included in Meta-analysis:**
 
+```
 Ademuyiwa et al [16]
-```
+
 F.O. Ademuyiwa, W. Bshara, K. Attwood, C. Morrison, S.B. Edge, A.R. Karpf, et al., NY-ESO-1 cancer testis antigen demonstrates high immunogenicity in triple negative breast cancer, PLoS One 7 (2012) e38783, https://doi.org/10.1371/journal.pone.0038783.
-```
 
-Tessari et al [26]
-```
+
+Tessari et al [27]
+
 A. Tessari, L. Pilla, D. Silvia, M. Duca, B. Paolini, M.L. Carcangiu, et al., Expression of NY-ESO-1, MAGE-A3, PRAME and WT1 in different subgroups of breast cancer: An indication to immunotherapy?, Breast 42 (2018) 68-73, https://doi.org/10.1016/j.breast.2018.08.106.
-```
 
-Lee et al [27]
-```
+
+Lee et al [28]
+
 H.J. Lee, J.Y. Kim, I.H. Song, I.A. Park, J.H. Yu, G. Gong, Expression of NY-ESO-1 in Triple-Negative Breast Cancer Is Associated with Tumor-Infiltrating Lymphocytes and a Good Prognosis, Oncology 89 (2015) 337-344, https://doi.org/10.1159/000439535.
-```
 
-Curigliano et al [65]
-```
+
+Curigliano et al [69]
+
 G. Curigliano, V. Bagnardi, M. Ghioni, J. Louahed, V. Brichard, F.F. Lehmann, et al., Expression of tumor-associated antigens in breast cancer subtypes, Breast 49 (2020) 202-209, https://doi.org/10.1016/j.breast.2019.12.002.
-```
 
-Chen et al [67]
-```
+
+Chen et al [71]
+
 Y.T. Chen, D.S. Ross, R. Chiu, X.K. Zhou, Y.Y. Chen, P. Lee, et al., Multiple cancer/testis antigens are preferentially expressed in hormone-receptor negative and high-grade breast cancers, PLoS One 6 (2011) e17876, https://doi.org/10.1371/journal.pone.0017876.
-```
 
-Mrklic et al [68]
-```
+
+Mrklic et al [72]
+
 I. Mrklic, G.C. Spagnoli, A. Juretic, Z. Pogorelic, S. Tomic, Co-expression of cancer testis antigens and topoisomerase 2-alpha in triple negative breast carcinomas, Acta Histochem 116 (2014) 740-746, https://doi.org/10.1016/j.acthis.2014.01.003.
-```
 
-Hamai et al [69]
-```
+
+Hamai et al [73]
+
 A. Hamai, K. Duperrier-Amouriaux, P. Pignon, I. Raimbaud, L. Memeo, C. Colarossi, et al., Antibody responses to NY-ESO-1 in primary breast cancer identify a subtype target for immunotherapy, PLoS One 6 (2011) e21129, https://doi.org/10.1371/journal.pone.0021129.
-```
 
-Raghavendra et al [70]
-```
+
+Raghavendra et al [74]
+
 A. Raghavendra, P. Kalita-de Croft, A.C. Vargas, C.E. Smart, P.T. Simpson, J.M. Saunus, et al., Expression of MAGE-A and NY-ESO-1 cancer/testis antigens is enriched in triple-negative invasive breast cancers, Histopathology 73 (2018) 68-80, https://doi.org/10.1111/his.13498.
-```
 
-Ceprnja et al [72]
-```
+
+Ceprnja et al [76]
+
 T. Ceprnja, I. Mrklic, M. Peric Balja, Z. Marusic, V. Blazicevic, G.C. Spagnoli, et al., Prognostic Significance of Lymphocyte Infiltrate Localization in Triple-Negative Breast Cancer, J Pers Med 12 (2022), https://doi.org/10.3390/jpm12060941.
-```
 
-Xiao et al [117]
-```
+
+Xiao et al [121]
+
 J. Xiao, F. Huang, L. Li, L. Zhang, L. Xie, B. Liu, Expression of four cancer-testis antigens in TNBC indicating potential universal immunotherapeutic targets, J Cancer Res Clin Oncol 149 (2023) 15003-15011, https://doi.org/10.1007/s00432-023-05274-0.
-```
 
-See et al [126]
-```
+
+See et al [130]
+
 S.H.C. See, S.H. Smith, B.S. Finkelman, C. LaBoy, J.E. Novo, K.P. Siziopikou, et al., The role of PRAME and NY-ESO-1 as potential therapeutic and prognostic biomarkers in triple-negative breast carcinomas, Pathol Res Pract 241 (2023) 154299, https://doi.org/10.1016/j.prp.2022.154299.
-```
 
-Tanja et al [127]
-```
+
+Tanja et al [131]
 T. Badovinac Crnjevic, G. Spagnoli, A. Juretic, J. Jakic-Razumovic, P. Podolski, N. Saric, High expression of MAGE-A10 cancer-testis antigen in triple-negative breast cancer, Med Oncol 29 (2012) 1586-1591, https://doi.org/10.1007/s12032-011-0120-9.
 ```
 
