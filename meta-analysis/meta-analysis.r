@@ -1,7 +1,7 @@
 library(meta)
 library(writexl)
 
-setwd("path/to/meta-analysis/")
+setwd("C:/Users/user/Documents/PhD/Paper/Review Paper/NY-ESO-1_A Promising Immunotherapeutic Target in Triple-Negative Breast Cancer/meta-analysis")
 
 # Helper function to back-transform from logit to proportion
 invlogit <- function(x) {
@@ -9,8 +9,8 @@ invlogit <- function(x) {
 }
 
 # Data - Please verify that they are accurate according to each study (the reference number [16] etc) 
-study_id <- c("Ademuwiya et al [16]", "Tessari et al [26]", "Lee et al [27]", "Curigliano et al [65]", "Chen et al [67]", 
-              "Mrklic et al [68]", "Hamai et al [69]", "Raghavendra et al [70]", "Ceprnja et al [72]", "Xiao et al [117]", "See et al [126]", "Tanja et al [127]")
+study_id <- c("Ademuwiya et al [16]", "Tessari et al [27]", "Lee et al [28]", "Curigliano et al [69]", "Chen et al [71]", 
+              "Mrklic et al [72]", "Hamai et al [73]", "Raghavendra et al [74]", "Ceprnja et al [76]", "Xiao et al [121]", "See et al [130]", "Badovinac Crnjevic et al [131]")
 
 events_percent <- c(16, 24, 9.7, 18, 19.1, 27.1, 24, 17, 38, 11.8, 5, 10) # NY-ESO-1-positive in %
 n <- c(168, 26, 612, 50, 225, 83, 42, 65, 97, 51, 76, 50) # Sample size
@@ -94,10 +94,6 @@ funnel(meta_prop,
 # Egger's test
 eggers_test <- metabias(meta_prop, method.bias = "Egger", k.min = 10)
 print(eggers_test)
-
-# Trim and fill analysis
-tf <- trimfill(meta_prop)
-print(tf)
 
 # Figure 6C: Subgroup by antibody
 antibody_subset <- antibody %in% c("E978", "D8.38")
@@ -377,10 +373,6 @@ cat("\n✓ All figures saved to 'figures/' directory (PNG and PDF formats)\n")
 # ============================================
 
 # Table 1: Individual study results
-# Note: Need to back-transform confidence intervals from logit scale
-# IMPORTANT: With PLOGIT + ML, meta_prop$w.random is NA
-# We need to calculate weights manually from variance components
-
 # Calculate standard errors from confidence intervals (on logit scale)
 se_logit <- (meta_prop$upper - meta_prop$lower) / (2 * 1.96)
 
@@ -399,9 +391,9 @@ results_table <- data.frame(
     Events = events,
     Total = n,
     Prevalence = round(events/n, 4),
-    Lower_CI = round(invlogit(meta_prop$lower), 4),  # BACK-TRANSFORM
-    Upper_CI = round(invlogit(meta_prop$upper), 4),  # BACK-TRANSFORM
-    Weight_Percent = round(weights_percent, 1),  # MANUALLY CALCULATED
+    Lower_CI = round(invlogit(meta_prop$lower), 4),
+    Upper_CI = round(invlogit(meta_prop$upper), 4),
+    Weight_Percent = round(weights_percent, 1),
     Region = region,
     Antibody = antibody,
     Study_Size = size_category
@@ -437,103 +429,87 @@ small_idx <- 2  # Small
 asia_pacific_idx <- 1  # Asia-Pacific
 western_idx <- 2  # Western
 
-# Build pooled results with BACK-TRANSFORMED values
-tf_k_total <- length(study_id) + tf$k0
-
 pooled_results <- data.frame(
-    Analysis = character(8),
-    k_studies = integer(8),
-    Prevalence = numeric(8),
-    Lower_CI = numeric(8),
-    Upper_CI = numeric(8),
-    I2_percent = numeric(8),
-    Q_statistic = numeric(8),
-    p_value = numeric(8),
+    Analysis = character(7),
+    k_studies = integer(7),
+    Prevalence = numeric(7),
+    Lower_CI = numeric(7),
+    Upper_CI = numeric(7),
+    I2_percent = numeric(7),
+    Q_statistic = numeric(7),
+    p_value = numeric(7),
     stringsAsFactors = FALSE
 )
-
-# NOTE: For PLOGIT, TE values are in logit scale, but lower/upper are already back-transformed
-# We need to back-transform TE values using invlogit()
 
 # Row 1: Random Effects Model
 pooled_results[1, "Analysis"] <- "Random Effects Model"
 pooled_results[1, "k_studies"] <- length(study_id)
-pooled_results[1, "Prevalence"] <- invlogit(meta_prop$TE.random[1])  # BACK-TRANSFORM
-pooled_results[1, "Lower_CI"] <- invlogit(meta_prop$lower.random[1])  # BACK-TRANSFORM
-pooled_results[1, "Upper_CI"] <- invlogit(meta_prop$upper.random[1])  # BACK-TRANSFORM
+pooled_results[1, "Prevalence"] <- invlogit(meta_prop$TE.random[1])
+pooled_results[1, "Lower_CI"] <- invlogit(meta_prop$lower.random[1])
+pooled_results[1, "Upper_CI"] <- invlogit(meta_prop$upper.random[1])
 pooled_results[1, "I2_percent"] <- round(meta_prop$I2[1] * 100, 1)
 pooled_results[1, "Q_statistic"] <- round(meta_prop$Q[1], 2)
 pooled_results[1, "p_value"] <- meta_prop$pval.Q[1]
 
-# Row 2: Trim-and-Fill
-pooled_results[2, "Analysis"] <- "Trim-and-Fill Adjusted"
-pooled_results[2, "k_studies"] <- tf_k_total
-pooled_results[2, "Prevalence"] <- invlogit(tf$TE.random[1])  # BACK-TRANSFORM
-pooled_results[2, "Lower_CI"] <- invlogit(tf$lower.random[1])  # BACK-TRANSFORM
-pooled_results[2, "Upper_CI"] <- invlogit(tf$upper.random[1])  # BACK-TRANSFORM
-pooled_results[2, "I2_percent"] <- round(tf$I2[1] * 100, 1)
-pooled_results[2, "Q_statistic"] <- round(tf$Q[1], 2)
-pooled_results[2, "p_value"] <- tf$pval.Q[1]
+# Row 2: E978 Antibody
+pooled_results[2, "Analysis"] <- "E978 Antibody Subgroup"
+pooled_results[2, "k_studies"] <- sum(antibody[antibody_subset] == "E978")
+pooled_results[2, "Prevalence"] <- invlogit(antibody_subgroups[e978_idx])
+pooled_results[2, "Lower_CI"] <- invlogit(antibody_lower[e978_idx])
+pooled_results[2, "Upper_CI"] <- invlogit(antibody_upper[e978_idx])
+pooled_results[2, "I2_percent"] <- round(antibody_I2[e978_idx] * 100, 1)
+pooled_results[2, "Q_statistic"] <- round(antibody_Q[e978_idx], 2)
+pooled_results[2, "p_value"] <- NA
 
-# Row 3: E978 Antibody
-pooled_results[3, "Analysis"] <- "E978 Antibody Subgroup"
-pooled_results[3, "k_studies"] <- sum(antibody[antibody_subset] == "E978")
-pooled_results[3, "Prevalence"] <- invlogit(antibody_subgroups[e978_idx])  # BACK-TRANSFORM
-pooled_results[3, "Lower_CI"] <- invlogit(antibody_lower[e978_idx])  # BACK-TRANSFORM
-pooled_results[3, "Upper_CI"] <- invlogit(antibody_upper[e978_idx])  # BACK-TRANSFORM
-pooled_results[3, "I2_percent"] <- round(antibody_I2[e978_idx] * 100, 1)
-pooled_results[3, "Q_statistic"] <- round(antibody_Q[e978_idx], 2)
+# Row 3: D8.38 Antibody
+pooled_results[3, "Analysis"] <- "D8.38 Antibody Subgroup"
+pooled_results[3, "k_studies"] <- sum(antibody[antibody_subset] == "D8.38")
+pooled_results[3, "Prevalence"] <- invlogit(antibody_subgroups[d838_idx])
+pooled_results[3, "Lower_CI"] <- invlogit(antibody_lower[d838_idx])
+pooled_results[3, "Upper_CI"] <- invlogit(antibody_upper[d838_idx])
+pooled_results[3, "I2_percent"] <- round(antibody_I2[d838_idx] * 100, 1)
+pooled_results[3, "Q_statistic"] <- round(antibody_Q[d838_idx], 2)
 pooled_results[3, "p_value"] <- NA
 
-# Row 4: D8.38 Antibody
-pooled_results[4, "Analysis"] <- "D8.38 Antibody Subgroup"
-pooled_results[4, "k_studies"] <- sum(antibody[antibody_subset] == "D8.38")
-pooled_results[4, "Prevalence"] <- invlogit(antibody_subgroups[d838_idx])  # BACK-TRANSFORM
-pooled_results[4, "Lower_CI"] <- invlogit(antibody_lower[d838_idx])  # BACK-TRANSFORM
-pooled_results[4, "Upper_CI"] <- invlogit(antibody_upper[d838_idx])  # BACK-TRANSFORM
-pooled_results[4, "I2_percent"] <- round(antibody_I2[d838_idx] * 100, 1)
-pooled_results[4, "Q_statistic"] <- round(antibody_Q[d838_idx], 2)
+# Row 4: Large Studies
+pooled_results[4, "Analysis"] <- "Large Studies (n≥100)"
+pooled_results[4, "k_studies"] <- sum(size_category == "Large (n≥100)")
+pooled_results[4, "Prevalence"] <- invlogit(size_subgroups[large_idx])
+pooled_results[4, "Lower_CI"] <- invlogit(size_lower[large_idx])
+pooled_results[4, "Upper_CI"] <- invlogit(size_upper[large_idx])
+pooled_results[4, "I2_percent"] <- round(size_I2[large_idx] * 100, 1)
+pooled_results[4, "Q_statistic"] <- round(size_Q[large_idx], 2)
 pooled_results[4, "p_value"] <- NA
 
-# Row 5: Large Studies
-pooled_results[5, "Analysis"] <- "Large Studies (n≥100)"
-pooled_results[5, "k_studies"] <- sum(size_category == "Large (n≥100)")
-pooled_results[5, "Prevalence"] <- invlogit(size_subgroups[large_idx])  # BACK-TRANSFORM
-pooled_results[5, "Lower_CI"] <- invlogit(size_lower[large_idx])  # BACK-TRANSFORM
-pooled_results[5, "Upper_CI"] <- invlogit(size_upper[large_idx])  # BACK-TRANSFORM
-pooled_results[5, "I2_percent"] <- round(size_I2[large_idx] * 100, 1)
-pooled_results[5, "Q_statistic"] <- round(size_Q[large_idx], 2)
+# Row 5: Small Studies
+pooled_results[5, "Analysis"] <- "Small Studies (n<100)"
+pooled_results[5, "k_studies"] <- sum(size_category == "Small (n<100)")
+pooled_results[5, "Prevalence"] <- invlogit(size_subgroups[small_idx])
+pooled_results[5, "Lower_CI"] <- invlogit(size_lower[small_idx])
+pooled_results[5, "Upper_CI"] <- invlogit(size_upper[small_idx])
+pooled_results[5, "I2_percent"] <- round(size_I2[small_idx] * 100, 1)
+pooled_results[5, "Q_statistic"] <- round(size_Q[small_idx], 2)
 pooled_results[5, "p_value"] <- NA
 
-# Row 6: Small Studies
-pooled_results[6, "Analysis"] <- "Small Studies (n<100)"
-pooled_results[6, "k_studies"] <- sum(size_category == "Small (n<100)")
-pooled_results[6, "Prevalence"] <- invlogit(size_subgroups[small_idx])  # BACK-TRANSFORM
-pooled_results[6, "Lower_CI"] <- invlogit(size_lower[small_idx])  # BACK-TRANSFORM
-pooled_results[6, "Upper_CI"] <- invlogit(size_upper[small_idx])  # BACK-TRANSFORM
-pooled_results[6, "I2_percent"] <- round(size_I2[small_idx] * 100, 1)
-pooled_results[6, "Q_statistic"] <- round(size_Q[small_idx], 2)
+# Row 6: Asia-Pacific
+pooled_results[6, "Analysis"] <- "Asia-Pacific Region"
+pooled_results[6, "k_studies"] <- sum(region_grouped == "Asia-Pacific")
+pooled_results[6, "Prevalence"] <- invlogit(region_subgroups[asia_pacific_idx])
+pooled_results[6, "Lower_CI"] <- invlogit(region_lower[asia_pacific_idx])
+pooled_results[6, "Upper_CI"] <- invlogit(region_upper[asia_pacific_idx])
+pooled_results[6, "I2_percent"] <- round(region_I2[asia_pacific_idx] * 100, 1)
+pooled_results[6, "Q_statistic"] <- round(region_Q[asia_pacific_idx], 2)
 pooled_results[6, "p_value"] <- NA
 
-# Row 7: Asia-Pacific
-pooled_results[7, "Analysis"] <- "Asia-Pacific Region"
-pooled_results[7, "k_studies"] <- sum(region_grouped == "Asia-Pacific")
-pooled_results[7, "Prevalence"] <- invlogit(region_subgroups[asia_pacific_idx])  # BACK-TRANSFORM
-pooled_results[7, "Lower_CI"] <- invlogit(region_lower[asia_pacific_idx])  # BACK-TRANSFORM
-pooled_results[7, "Upper_CI"] <- invlogit(region_upper[asia_pacific_idx])  # BACK-TRANSFORM
-pooled_results[7, "I2_percent"] <- round(region_I2[asia_pacific_idx] * 100, 1)
-pooled_results[7, "Q_statistic"] <- round(region_Q[asia_pacific_idx], 2)
+# Row 7: Western Countries
+pooled_results[7, "Analysis"] <- "Western Countries Region"
+pooled_results[7, "k_studies"] <- sum(region_grouped == "Western Countries")
+pooled_results[7, "Prevalence"] <- invlogit(region_subgroups[western_idx])
+pooled_results[7, "Lower_CI"] <- invlogit(region_lower[western_idx])
+pooled_results[7, "Upper_CI"] <- invlogit(region_upper[western_idx])
+pooled_results[7, "I2_percent"] <- round(region_I2[western_idx] * 100, 1)
+pooled_results[7, "Q_statistic"] <- round(region_Q[western_idx], 2)
 pooled_results[7, "p_value"] <- NA
-
-# Row 8: Western Countries
-pooled_results[8, "Analysis"] <- "Western Countries Region"
-pooled_results[8, "k_studies"] <- sum(region_grouped == "Western Countries")
-pooled_results[8, "Prevalence"] <- invlogit(region_subgroups[western_idx])  # BACK-TRANSFORM
-pooled_results[8, "Lower_CI"] <- invlogit(region_lower[western_idx])  # BACK-TRANSFORM
-pooled_results[8, "Upper_CI"] <- invlogit(region_upper[western_idx])  # BACK-TRANSFORM
-pooled_results[8, "I2_percent"] <- round(region_I2[western_idx] * 100, 1)
-pooled_results[8, "Q_statistic"] <- round(region_Q[western_idx], 2)
-pooled_results[8, "p_value"] <- NA
 
 # Table 3: Heterogeneity statistics
 heterogeneity_table <- data.frame(
@@ -579,21 +555,9 @@ heterogeneity_table[6, "CI_or_df"] <- "-"
 
 # Table 4: Publication bias tests
 publication_bias_table <- data.frame(
-    Test = c("Egger's test", "Trim-and-Fill"),
-    Statistic = c(
-        paste0("t = ", round(eggers_test$statistic, 2)),
-        paste0("k = ", tf_k_total, " (+", tf$k0, " studies)")
-    ),
-    p_value = c(
-        format(eggers_test$p.value, digits = 4),
-        ""
-    ),
-    Adjusted_Prevalence = c(
-        "",
-        paste0(round(invlogit(tf$TE.random[1]), 4), " [", 
-               round(invlogit(tf$lower.random[1]), 4), "; ", 
-               round(invlogit(tf$upper.random[1]), 4), "]")
-    )
+    Test = c("Egger's test"),
+    Statistic = c(paste0("t = ", round(eggers_test$statistic, 2))),
+    p_value = c(format(eggers_test$p.value, digits = 4))
 )
 
 # Table 5: Subgroup comparison tests
@@ -641,10 +605,6 @@ cat(sprintf("Pooled Prevalence: %.2f%% (95%% CI: %.2f%% - %.2f%%)\n",
             meta_prop$upper.random[1] * 100))
 cat(sprintf("I²: %.1f%% (substantial heterogeneity)\n", meta_prop$I2[1] * 100))
 cat(sprintf("Egger's test p-value: %.4f\n", eggers_test$p.value))
-cat(sprintf("Trim-and-Fill adjusted: %.2f%% (95%% CI: %.2f%% - %.2f%%)\n",
-            invlogit(tf$TE.random[1]) * 100,
-            tf$lower.random[1] * 100,
-            tf$upper.random[1] * 100))
 cat(sprintf("\nE978 antibody: %.2f%% | D8.38 antibody: %.2f%% (p = %.4f)\n",
             invlogit(antibody_subgroups[e978_idx]) * 100,
             invlogit(antibody_subgroups[d838_idx]) * 100,
