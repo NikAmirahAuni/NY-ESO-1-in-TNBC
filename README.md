@@ -174,17 +174,17 @@ Detailed commands and analysis methods are in `visualization_protocol.md`
 | Study | Region | Sample Size | Antibody | Prevalence |
 |-------|--------|-------------|----------|------------|
 | Ademuyiwa et al [16] | USA | 168 | E978 | 16.0% |
-| Tessari et al [26] | Italy | 26 | E978 | 24.0% |
-| Lee et al [27] | Korea | 612 | NA | 9.7% |
-| Curigliano et al [65] | Italy | 50 | E978 | 18.0% |
-| Chen et al [67] | USA | 225 | E978 | 19.1% |
-| Mrklic et al [68] | Croatia | 83 | D8.38 | 27.1% |
-| Hamai et al [69] | France | 42 | E978 | 24.0% |
-| Raghavendra et al [70] | Australia | 65 | sc53869 | 17.0% |
-| Ceprnja et al [72] | Croatia | 97 | D8.38 | 38.0% |
-| Xiao et al [117] | China | 51 | E978 | 11.8% |
-| See et al [126] | USA | 76 | E978 | 5.0% |
-| Tanja et al [127] | Croatia | 50 | B.9.8.1.1 | 10.0% |
+| Tessari et al [27] | Italy | 26 | E978 | 24.0% |
+| Lee et al [28] | Korea | 612 | NA | 9.7% |
+| Curigliano et al [69] | Italy | 50 | E978 | 18.0% |
+| Chen et al [71] | USA | 225 | E978 | 19.1% |
+| Mrklic et al [72] | Croatia | 83 | D8.38 | 27.1% |
+| Hamai et al [73] | France | 42 | E978 | 24.0% |
+| Raghavendra et al [74] | Australia | 65 | sc53869 | 17.0% |
+| Ceprnja et al [76] | Croatia | 97 | D8.38 | 38.0% |
+| Xiao et al [121] | China | 51 | E978 | 11.8% |
+| See et al [130] | USA | 76 | E978 | 5.0% |
+| Tanja et al [131] | Croatia | 50 | B.9.8.1.1 | 10.0% |
 
 **Total:** 12 studies, 1,595 TNBC patients
 
@@ -204,7 +204,6 @@ Detailed commands and analysis methods are in `visualization_protocol.md`
 - **Publication bias testing**
    - Funnel plot
    - Egger's regression test (minimum k=10 studies)
-   - Trim-and-fill analysis
 - **Subgroup analyses:**
    - By antibody clone (E978 vs D8.38)
    - By study size (large ≥100 vs small <100)
