@@ -1,7 +1,7 @@
 library(meta)
 library(writexl)
 
-setwd("C:/Users/user/Documents/PhD/Paper/Review Paper/NY-ESO-1_A Promising Immunotherapeutic Target in Triple-Negative Breast Cancer/meta-analysis")
+setwd("path/to/metadata/")
 
 # Helper function to back-transform from logit to proportion
 invlogit <- function(x) {
@@ -623,3 +623,4 @@ cat("Use the arrows in Plots pane to navigate between figures\n")
 cat("Use Export > Save as Image/PDF to save individual plots\n")
 cat("\n✓ All figures automatically saved to 'figures/' directory\n")
 cat("\n✓ Excel file created successfully with BACK-TRANSFORMED values\n")
+
