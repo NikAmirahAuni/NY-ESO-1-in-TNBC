@@ -421,9 +421,8 @@ This work is licensed under [Creative Commons Attribution 4.0 International (CC 
 
 ## 💬 Contact
 
-**Nik Mohd Asri Nik Amirah Auni**   
-nikamirahauni@gmail.com   
-Department of Immunology, School of Medical Sciences,   
-Universiti Sains Malaysia, Kelantan, Malaysia   
+🧑 **Nik Mohd Asri Nik Amirah Auni**   
+📧 nikamirahauni@gmail.com   
+🏫 Department of Immunology, School of Medical Sciences, Universiti Sains Malaysia, Kelantan, Malaysia   
 
 ---
