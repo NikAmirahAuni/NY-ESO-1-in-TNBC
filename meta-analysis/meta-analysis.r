@@ -1,7 +1,7 @@
 library(meta)
 library(writexl)
 
-setwd("path/to/metadata/")
+setwd("path/to/meta-analysis/")
 
 # Helper function to back-transform from logit to proportion
 invlogit <- function(x) {
@@ -421,14 +421,7 @@ region_upper <- meta_region$upper.random.w
 region_I2 <- meta_region$I2.w
 region_Q <- meta_region$Q.w
 
-# Indices (alphabetically ordered by meta package)
-d838_idx <- 1  # D8.38 
-e978_idx <- 2  # E978
-large_idx <- 1  # Large
-small_idx <- 2  # Small
-asia_pacific_idx <- 1  # Asia-Pacific
-western_idx <- 2  # Western
-
+# Create pooled results data frame
 pooled_results <- data.frame(
     Analysis = character(7),
     k_studies = integer(7),
@@ -451,7 +444,8 @@ pooled_results[1, "I2_percent"] <- round(meta_prop$I2[1] * 100, 1)
 pooled_results[1, "Q_statistic"] <- round(meta_prop$Q[1], 2)
 pooled_results[1, "p_value"] <- meta_prop$pval.Q[1]
 
-# Row 2: E978 Antibody
+# Row 2: E978 Antibody - Use dynamic name matching
+e978_idx <- which(names(antibody_subgroups) == "E978")
 pooled_results[2, "Analysis"] <- "E978 Antibody Subgroup"
 pooled_results[2, "k_studies"] <- sum(antibody[antibody_subset] == "E978")
 pooled_results[2, "Prevalence"] <- invlogit(antibody_subgroups[e978_idx])
@@ -461,7 +455,8 @@ pooled_results[2, "I2_percent"] <- round(antibody_I2[e978_idx] * 100, 1)
 pooled_results[2, "Q_statistic"] <- round(antibody_Q[e978_idx], 2)
 pooled_results[2, "p_value"] <- NA
 
-# Row 3: D8.38 Antibody
+# Row 3: D8.38 Antibody - Use dynamic name matching
+d838_idx <- which(names(antibody_subgroups) == "D8.38")
 pooled_results[3, "Analysis"] <- "D8.38 Antibody Subgroup"
 pooled_results[3, "k_studies"] <- sum(antibody[antibody_subset] == "D8.38")
 pooled_results[3, "Prevalence"] <- invlogit(antibody_subgroups[d838_idx])
@@ -471,7 +466,8 @@ pooled_results[3, "I2_percent"] <- round(antibody_I2[d838_idx] * 100, 1)
 pooled_results[3, "Q_statistic"] <- round(antibody_Q[d838_idx], 2)
 pooled_results[3, "p_value"] <- NA
 
-# Row 4: Large Studies
+# Row 4: Large Studies - Use dynamic name matching
+large_idx <- which(names(size_subgroups) == "Large (n≥100)")
 pooled_results[4, "Analysis"] <- "Large Studies (n≥100)"
 pooled_results[4, "k_studies"] <- sum(size_category == "Large (n≥100)")
 pooled_results[4, "Prevalence"] <- invlogit(size_subgroups[large_idx])
@@ -481,7 +477,8 @@ pooled_results[4, "I2_percent"] <- round(size_I2[large_idx] * 100, 1)
 pooled_results[4, "Q_statistic"] <- round(size_Q[large_idx], 2)
 pooled_results[4, "p_value"] <- NA
 
-# Row 5: Small Studies
+# Row 5: Small Studies - Use dynamic name matching
+small_idx <- which(names(size_subgroups) == "Small (n<100)")
 pooled_results[5, "Analysis"] <- "Small Studies (n<100)"
 pooled_results[5, "k_studies"] <- sum(size_category == "Small (n<100)")
 pooled_results[5, "Prevalence"] <- invlogit(size_subgroups[small_idx])
@@ -491,24 +488,26 @@ pooled_results[5, "I2_percent"] <- round(size_I2[small_idx] * 100, 1)
 pooled_results[5, "Q_statistic"] <- round(size_Q[small_idx], 2)
 pooled_results[5, "p_value"] <- NA
 
-# Row 6: Asia-Pacific
+# Row 6: Asia-Pacific - Use dynamic name matching
+ap_idx <- which(names(region_subgroups) == "Asia-Pacific")
 pooled_results[6, "Analysis"] <- "Asia-Pacific Region"
 pooled_results[6, "k_studies"] <- sum(region_grouped == "Asia-Pacific")
-pooled_results[6, "Prevalence"] <- invlogit(region_subgroups[asia_pacific_idx])
-pooled_results[6, "Lower_CI"] <- invlogit(region_lower[asia_pacific_idx])
-pooled_results[6, "Upper_CI"] <- invlogit(region_upper[asia_pacific_idx])
-pooled_results[6, "I2_percent"] <- round(region_I2[asia_pacific_idx] * 100, 1)
-pooled_results[6, "Q_statistic"] <- round(region_Q[asia_pacific_idx], 2)
+pooled_results[6, "Prevalence"] <- invlogit(region_subgroups[ap_idx])
+pooled_results[6, "Lower_CI"] <- invlogit(region_lower[ap_idx])
+pooled_results[6, "Upper_CI"] <- invlogit(region_upper[ap_idx])
+pooled_results[6, "I2_percent"] <- round(region_I2[ap_idx] * 100, 1)
+pooled_results[6, "Q_statistic"] <- round(region_Q[ap_idx], 2)
 pooled_results[6, "p_value"] <- NA
 
-# Row 7: Western Countries
+# Row 7: Western Countries - Use dynamic name matching
+west_idx <- which(names(region_subgroups) == "Western Countries")
 pooled_results[7, "Analysis"] <- "Western Countries Region"
 pooled_results[7, "k_studies"] <- sum(region_grouped == "Western Countries")
-pooled_results[7, "Prevalence"] <- invlogit(region_subgroups[western_idx])
-pooled_results[7, "Lower_CI"] <- invlogit(region_lower[western_idx])
-pooled_results[7, "Upper_CI"] <- invlogit(region_upper[western_idx])
-pooled_results[7, "I2_percent"] <- round(region_I2[western_idx] * 100, 1)
-pooled_results[7, "Q_statistic"] <- round(region_Q[western_idx], 2)
+pooled_results[7, "Prevalence"] <- invlogit(region_subgroups[west_idx])
+pooled_results[7, "Lower_CI"] <- invlogit(region_lower[west_idx])
+pooled_results[7, "Upper_CI"] <- invlogit(region_upper[west_idx])
+pooled_results[7, "I2_percent"] <- round(region_I2[west_idx] * 100, 1)
+pooled_results[7, "Q_statistic"] <- round(region_Q[west_idx], 2)
 pooled_results[7, "p_value"] <- NA
 
 # Table 3: Heterogeneity statistics
@@ -601,8 +600,8 @@ cat("\n✓ Results exported to: NY-ESO-1_Meta_Analysis_Results.xlsx\n")
 cat("\n=== MAIN RESULTS ===\n")
 cat(sprintf("Pooled Prevalence: %.2f%% (95%% CI: %.2f%% - %.2f%%)\n", 
             invlogit(meta_prop$TE.random[1]) * 100, 
-            meta_prop$lower.random[1] * 100, 
-            meta_prop$upper.random[1] * 100))
+            invlogit(meta_prop$lower.random[1]) * 100, 
+            invlogit(meta_prop$upper.random[1]) * 100))
 cat(sprintf("I²: %.1f%% (substantial heterogeneity)\n", meta_prop$I2[1] * 100))
 cat(sprintf("Egger's test p-value: %.4f\n", eggers_test$p.value))
 cat(sprintf("\nE978 antibody: %.2f%% | D8.38 antibody: %.2f%% (p = %.4f)\n",
@@ -615,12 +614,11 @@ cat(sprintf("Large studies: %.2f%% | Small studies: %.2f%% (p = %.4f)\n",
             meta_size$pval.Q.b.random))
 cat(sprintf("\nGeographic regions (p = %.4f):\n", meta_region$pval.Q.b.random))
 cat(sprintf("  Asia-Pacific: %.2f%% | Western Countries: %.2f%%\n",
-            invlogit(region_subgroups[asia_pacific_idx]) * 100,
-            invlogit(region_subgroups[western_idx]) * 100))
+            invlogit(region_subgroups[ap_idx]) * 100,
+            invlogit(region_subgroups[west_idx]) * 100))
 
 cat("\n=== All plots displayed in RStudio Plots pane ===\n")
 cat("Use the arrows in Plots pane to navigate between figures\n")
 cat("Use Export > Save as Image/PDF to save individual plots\n")
 cat("\n✓ All figures automatically saved to 'figures/' directory\n")
 cat("\n✓ Excel file created successfully with BACK-TRANSFORMED values\n")
-
